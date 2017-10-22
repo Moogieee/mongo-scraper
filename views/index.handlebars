@@ -1,1 +1,22 @@
-<div></div>
+<div class="jumbotron jumbotext">
+  <h1 class="display-3">Mongo Scraper</h1>
+  <p class="lead">The Onion Edition</p>
+  <hr class="my-4">
+  <p>Your most reliable news source. </p>
+
+</div>
+
+{{#each results}}
+    <div class="card">
+        <a href="https://www.theonion.com{{this.link}}" target="_blank">
+            <h5 class="card-header">{{this.title}}</h5>
+        </a>
+        <div class="card-block">
+            <a href="{{this.link}}">
+            <p class="card-text">{{this.snippet}}</p>
+            </a>
+            <br>
+            <a href="/articles/{{this._id}}" class="btn btn-primary">Comment</a>
+        </div>
+    </div>
+{{/each}}
