@@ -17,7 +17,6 @@ var axios = require('axios');
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
-
 // Initialize Express
 var app = express();
 
